@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Your Bootstrap Website</title>
+
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/jquery.raty/2.9.0/jquery.raty.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Optional: Add your custom styles here -->
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+    <!-- Bootstrap container with a row and columns
+    Extra small (col-)      <576px
+    small (col-sm-)         >=576px
+    medium(col-md-)         >=992px
+    extra large(col-xl-)    >=1200px
+    -->
+    
+<div class="container1 ">
+  <div class="row">
+      <div class=" col-12 col-sm-12 col-md-6 ">
+          <!-- Column with heading and paragraph -->
+          <div class="About-hedding">About the Certificate</div>
+          <p class="p">Porem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie,
+              dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus,
+              ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent
+              taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent auctor purus luctus enim egestas.</p>
+<div class="circles">
+    <div class="circle "></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+</div>
+         
+      </div>
+      <div class="col-12 col-sm-12 col-md-6  ">
+          <!-- Column with an image -->
+          <img style=" width: 447px; padding-block: 2rem; " src="c:\Users\Admin\Downloads\certificate-of-membership.jpg" alt="Image Description" class="img-fluid">
+      </div>
+  </div>
+  
+  
+</div>
+
+    <div class="container-fluid ">
+        <h3>Course Structure</h3>
+    </div>
+    
+
+    <div id="content"></div>
+
+    <script>
+        // Function to generate the HTML code for a container
+        function generateContainer(course, num, description) {
+            return `
+                <div class="container custom-container">
+                    <div class="row">
+                        <div class="col-4 col-sm-2 col-md-2 col-lg-2 text-center">
+                            <div class="course-heading">Course</div>
+                            <div class="s-num">${num}</div>
+                        </div>
+                        <div class="col-8 col-sm-6 col-md-6 col-lg-6">
+                            <p class="p1">${description}</p>
+                        </div>
+                        <div class="col-7 col-sm-2 col-md-2 col-lg-2">
+                            <div class="course-heading1">Duration</div>
+                            <p>
+                                <span class="normal-text">30</span>
+                                <span class="larger-text"> Hrs</span>
+                            </p>
+                        </div>
+                        <div class="col-3 col-sm-2 col-md-2 col-lg-2">
+                            <div class="course-heading1">Tests</div>
+                            <p>
+                                <span class="normal-text">4</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+    
+        // Function to generate and append the content to the 'content' div
+        function generateContent() {
+            const contentDiv = document.getElementById('content');
+    
+            // Sample data for each container
+            const data = [
+                { course: 'Course', num: 1, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.' },
+                { course: 'Course', num: 2, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.' },
+                { course: 'Course', num: 3, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.' },
+                { course: 'Course', num: 4, description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.' },
+            ];
+    
+            // Loop through the data and generate containers
+            data.forEach(item => {
+                const containerDiv = document.createElement('div');
+                containerDiv.innerHTML = generateContainer(item.course, item.num, item.description);
+                contentDiv.appendChild(containerDiv);
+            });
+        }
+    
+        // Generate the content on page load
+        generateContent();
+    </script>
+ <!-- Centered Button with Glyphicon -->
+ <div class="downword_navigation">
+  <button class="navigation_background">
+      <svg xmlns="http://www.w3.org/2000/svg" width="40px" height="40px" width: 36px
+    
+       border=" 6px" viewBox="0 0 24 24" fill="white">
+          <path d="M12 15.41l-6.29-6.29a1.008 1.008 0 0 0-1.42 1.42l7 7a1.008 1.008 0 0 0 1.42 0l7-7a1.008 1.008 0 0 0-1.42-1.42L12 15.41z"/>
+      </svg>
+      
+  </button>
+</div>
+
+<div class="container2 mt-5">
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-6 ">
+            <!-- Column 1: Heading, Paragraph, Rating Stars -->
+            <div class="About-hedding2">About the Instructor</div>
+            <p class="p">Porem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie,
+                 dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus,.</p>
+    
+            <!-- Rating Stars Icons (Font Awesome used here) -->
+            <div class="instru_rating ">Instructor’s Rating</div>
+            <div class="rating  ">
+                <input type="radio" id="star5" name="rating" value="5" />
+                <label for="star5"></label>
+                <input type="radio" id="star4" name="rating" value="4" />
+                <label for="star4"></label>
+                <input type="radio" id="star3" name="rating" value="3" />
+                <label for="star3"></label>
+                <input type="radio" id="star2" name="rating" value="2" />
+                <label for="star2"></label>
+                <input type="radio" id="star1" name="rating" value="1" />
+                <label for="star1"></label>
+            </div>
+    
+<div class="container-B mt-0">
+    <!-- Button to open the modal -->
+    <div class="button2">
+      <button class="instru_btn btn btn-primary float-left mb-3" data-toggle="modal" data-target="#courseModal">
+        <div class="instru_note">View Other Courses by this Instructor</div>
+      </button>
+    </div>
+  </div>
+  
+  
+  <!-- Modal -->
+  <div class="modal fade" id="courseModal" tabindex="-1" role="dialog" aria-labelledby="courseModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="background: #4D9DA5; color: white;">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Content goes here -->
+          <div class="container3">
+            <div class="row">
+              <!-- First Column -->
+              <div class="col-md-6">
+                <div class="modal-hedding">Ms. Sharmila Jain</div>
+                <div class="modal-pera">Horem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie,
+                  dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus
+                  sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad.
+                </div>
+  
+                <!-- Three rectangular boxes -->
+                <div class="row">
+                  <div class="col-md-4 col-4 mb-3">
+                      <div class="box"></div>
+                  </div>
+                  <div class="col-md-4 col-4 mb-3">
+                      <div class="box"></div>
+                  </div>
+                  <div class="col-md-4 col-4 mb-3">
+                      <div class="box"></div>
+                  </div>
+              </div>
+              
+  
+                <div class="Heading  mb-3">Courses Taught by this Instructor</div>
+                <!-- Four squares -->
+                 <!-- Wrap your existing code in a container with the scroll-container class -->
+ 
+    <!-- First row -->
+    <div class="row">
+      <div class="col-md-4 col-6  mb-3">
+        <div class="square"></div>
+      </div>
+      <div class="col-md-4  col-6 mb-3">
+        <div class="square"></div>
+      </div>
+    </div>
+
+    <!-- Second row -->
+    <div class="row">
+      <div class="col-md-4 col-6  mb-3">
+        <div class="square"></div>
+      </div>
+      <div class="col-md-4 col-6  mb-3">
+        <div class="square"></div>
+      </div>
+    </div>
+  
+
+              </div>
+  
+              <!-- Second Column -->
+              <div class="col-md-6">
+                <div class="image-container">
+                  <!-- Add your image or other content here -->
+                  <img class="img-fluid " style="height: 500px;" src="c:\Users\Admin\Downloads\Capture.PNG" alt="Image">
+                 <!--<button class="btn btn-primary float-right" data-dismiss="modal">Close</button>--> 
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+       
+      </div>
+    </div>
+  </div>
+  
+
+
+        </div>
+        <div class="col-12 col-sm-12 col-md-6">
+            <!-- Column 2: Image -->
+            <img style="width: 502px; " src="https://www.livesmartcontent.com/app/uploads/2021/03/Positivity_At_Work_730x445px_1000x600.jpeg" alt="instructor_image" class="instru_image">
+        </div>
+    </div>
+  </div>
+  
+
+    <!-- Bootstrap JavaScript and dependencies (jQuery and Popper.js) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+   
+
+</body>
+</html>
